@@ -1,0 +1,35 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand">Parkerites</a>
+    <form class="form-inline">
+        <button class="link" (click)="getCurrentBookings()">Current Bookings</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="link" (click)="getPreviousBookings()">Previous Bookings</button>
+    </form>
+</nav>
+
+<br />
+<br />
+<div *ngIf=previousBookingFlag>
+    <h3>Finished Bookings</h3>
+    <div class="card border-warning mb-3 container " *ngFor="let booking of previousBookings; let i=index" style="max-width: 18rem;">
+        <div class="card-header">Finished Booking</div>
+        <div class="card-body text-warning">
+          <h5 class="card-title">{{booking.id}}</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+ </div>
+<div *ngIf=currentBookingFlag>
+    <div class="card border-info mb-3 container " *ngFor="let booking of currentBookings; let i=index" style="max-width: 18rem;">
+        <div class="card-header">Active Booking</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">{{booking.id}}</h5>
+          <div *ngIf="booking.status=='inactive'">
+          <button type="button" class="btn btn-info" [disabled]="booking.cancelBookingFlag" (click)="cancel(booking.id)">Cancel Booking</button>  
+        </div>
+          
+          <p class="card-text"></p>
+        </div>
+      </div>
+      
+</div>

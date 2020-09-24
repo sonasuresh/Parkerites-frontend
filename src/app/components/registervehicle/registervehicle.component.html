@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<br/><br/>
+<div class="container">
+<div align="center"><h3>PARKERITES</h3><hr/><br/><br/>
+
+<form [formGroup]="regForm">
+    <div class="align">
+     <div class="form-group row">
+      
+      Vehicle Number&nbsp;&nbsp;
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="number" formControlName="number" placeholder="MH-19-AG-5465" required>
+      </div>
+    </div><br/>
+    <div class="form-group row">
+      
+      RFID Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="col-sm-5">
+        <input type="text" class="form-control" id="rfid" formControlName="rfid" placeholder="F532C35" required>
+      </div>
+    </div>
+    </div> 
+   
+    <br/>
+    <div class="form-group row">
+      <div class="col-sm-12">
+       
+        <button type="submit" (click)="registerUserVehicleDetails()" class="btn btn-info">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>

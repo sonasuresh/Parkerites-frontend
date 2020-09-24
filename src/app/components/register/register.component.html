@@ -1,0 +1,33 @@
+<br/><br/>
+<div class="container">
+<div align="center"><h3>PARKERITES</h3><hr/><br/><br/>
+
+<form [formGroup]="regForm">
+    <div class="align">
+     <div class="form-group row">
+      
+      Mobile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="col-sm-5">
+        <input type="number" class="form-control" formControlName="number" id="number" placeholder="+91" required>
+      </div>
+    </div><br/>
+    <div class="form-group row">
+      
+      Password&nbsp;&nbsp;&nbsp;<div class="col-sm-5">
+        <input type="password" class="form-control" id="inputPassword3" formControlName="password" placeholder="Enter your Password" required>
+      </div>
+    </div>
+    </div> 
+   
+    <br/>
+    <div class="form-group row">
+      <div class="col-sm-12">
+       
+        <button type="submit" (click)="registerUser()" class="btn btn-info">Next&nbsp;&nbsp;<i class="fa fa-arrow-right" ></i></button>
+        <br/><br/>
+        <a href="/login">Already Registered?Login</a>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
